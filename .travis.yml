@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-  - docker build -t sanicodeme/basic-react -f Dockerfile.dev
+  - docker build -t sanicodeme/basic-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true sanicodeme/basic-react npm run test
